@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Cars Api</title>
+</head>
+
+<body>
+<div class="container">
+    <!--Grid row-->
+
+    <div class="text-center">
+        <h1>Cars Api</h1>
+    </div>
+
+    <div class="text-center">
+
+        <div class="accordion" id="cars">
+
+
+        </div>
+        <button id="showAllCars" type="button" onclick="getAllCars()" class="btn btn-outline-secondary btn-lg">Show all
+            cars
+        </button>
+        <button id="addCar" type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal"
+                data-target="#addMenuModal">Add car
+        </button>
+        <button id="searchCarByProdYear" type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal"
+                data-target="#searchCarByProdYearMenuModal">Search cars by production year
+        </button>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="addMenuModal" tabindex="-1" role="dialog"
+             aria-labelledby="addMenuModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addMenuModalLabel">Add car</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="markFormInput">Mark</label>
+                                <input type="text" class="form-control" id="markFormInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="modelFormInput">Model</label>
+                                <input type="text" class="form-control" id="modelFormInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="colorFormInput">Color</label>
+                                <input type="text" class="form-control" id="colorFormInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="prodYearFormInput">Production Year</label>
+                                <input type="text" class="form-control" id="prodYearFormInput">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" onclick="showModalAddMenu()" data-dismiss="modal"
+                                class="btn btn-primary">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="searchCarByProdYearMenuModal" tabindex="-1" role="dialog"
+             aria-labelledby="searchCarByProdYearMenuModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="searchCarByProdYearMenuModalLabel">Add car</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="fromProdYearInput">from Prod Year</label>
+                                <input type="number" class="form-control" id="fromProdYearInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="toProdYearInput">to Prod Year Input</label>
+                                <input type="number" class="form-control" id="toProdYearInput">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" onclick="searchCarByProdYear()" data-dismiss="modal"
+                                class="btn btn-primary">Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
